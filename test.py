@@ -8,11 +8,11 @@ s소스 = '{"a": "1", "b": "one"}'
 dic소스 = json.loads(s소스)
 
 # json to 파일
-with open('test.json', 'wt') as file:
+with open('config.json', 'wt') as file:
     json.dump(dic소스, file, indent=4, sort_keys=False)
 
 # json from 파일
-with open('test.json', 'rt') as file:
+with open('config.json', 'rt') as file:
     dic리드 = json.load(file)
 
 # dict to str
