@@ -4,7 +4,7 @@ print(s_a)
 s = '{"a": "1", "b": "one"}'
 # json 파일 저장
 with open('test.json', 'wt') as file:
-    json.dump(s, file, indent=4, sort_key=True)
+    json.dump(s, file, indent=4, sort_keys=True)
 
 # json to 메모리(dict)
 dic = json.dumps(s)
