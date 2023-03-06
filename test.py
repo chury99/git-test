@@ -1,18 +1,19 @@
 s_a = 'hello world'
 print(s_a)
 
-s = '{"a": "1", "b": "one"}'
-# json 파일 저장
+import json
+s소스 = '{"a": "1", "b": "one"}'
+
+# str to dict
+dic소스 = json.loads(s소스)
+
+# json to 파일
 with open('test.json', 'wt') as file:
-    json.dump(s, file, indent=4, sort_keys=True)
+    json.dump(dic소스, file, indent=4, sort_keys=False)
 
-# json to 메모리(dict)
-dic = json.dumps(s)
-
-# jeon 파일 읽기
+# json from 파일
 with open('test.json', 'rt') as file:
-    s = json.load(file)
+    dic리드 = json.load(file)
 
-# json from 메모리(str)
-s = json.loads(dic)
-    
+# dict to str
+s리드 = json.dumps(dic리드)
